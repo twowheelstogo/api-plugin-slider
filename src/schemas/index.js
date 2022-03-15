@@ -1,19 +1,19 @@
 import importAsString from "@reactioncommerce/api-utils/importAsString.js";
 
-const addTag = importAsString("./addTag.graphql");
-const productsByTagId = importAsString("./productsByTagId.graphql");
-const removeTag = importAsString("./removeTag.graphql");
-const setTagHeroMedia = importAsString("./setTagHeroMedia.graphql");
-const tag = importAsString("./tag.graphql");
-const tags = importAsString("./tags.graphql");
-const updateTag = importAsString("./updateTag.graphql");
+const addSlider = importAsString("./addSlider.graphql");
+const productsBySliderId = importAsString("./productsBySliderId.graphql");
+const removeSlider = importAsString("./removeSlider.graphql");
+const setSliderHeroMedia = importAsString("./setSliderHeroMedia.graphql");
+const slider = importAsString("./slider.graphql");
+const sliders = importAsString("./sliders.graphql");
+const updateSlider = importAsString("./updateSlider.graphql");
 
 export default [
-  addTag,
-  productsByTagId,
-  removeTag,
-  setTagHeroMedia,
-  tag,
-  tags,
-  updateTag
+  addSlider,
+  productsBySliderId,
+  removeSlider,
+  setSliderHeroMedia,
+  slider,
+  sliders,
+  updateSlider
 ];

@@ -1,15 +1,15 @@
 [
   {
     "i18n": "es",
-    "ns": "reaction-tags",
+    "ns": "reaction-sliders",
     "translation": {
-      "reaction-tags": {
-        "tagAddedToProduct": "Etiqueta \"{{tagName}}\" añadida al producto",
-        "tagRemovedFromProduct": "Etiqueta \"{{tagName}}\" eliminada del producto",
+      "reaction-sliders": {
+        "sliderAddedToProduct": "Etiqueta \"{{sliderName}}\" añadida al producto",
+        "sliderRemovedFromProduct": "Etiqueta \"{{sliderName}}\" eliminada del producto",
         "admin": {
-          "tags": {
-            "tags": "Etiquetas",
-            "tagManagement": "Gestión de etiquetas",
+          "sliders": {
+            "sliders": "Etiquetas",
+            "sliderManagement": "Gestión de etiquetas",
             "enabled": "Habilitada",
             "disabled": "Deshabilitada",
             "enable": "Habilitar",
@@ -49,13 +49,13 @@
               "submitUpdate": "Editar Etiqueta",
               "saveChanges": "Guardar cambios",
               "isVisible": "La etiqueta está habilitada en la tienda",
-              "tagDetails": "Detalles de la etiqueta",
+              "sliderDetails": "Detalles de la etiqueta",
               "metadata": "Metadatos",
               "products": "Productos",
               "save": "Guardar",
-              "tagListingHero": "Hero-image de la página de listado de etiquetas",
-              "tagListingHeroHelpText": "Las imágenes con una relación de aspecto de 16:9 o superior funcionan mejor.",
-              "tagMetadata": "Metadatos de la etiqueta",
+              "sliderListingHero": "Hero-image de la página de listado de etiquetas",
+              "sliderListingHeroHelpText": "Las imágenes con una relación de aspecto de 16:9 o superior funcionan mejor.",
+              "sliderMetadata": "Metadatos de la etiqueta",
               "openGraph": "OpenGraph",
               "keywords": "Palabras clave",
               "keywordsPlaceholder": "Palabras clave",

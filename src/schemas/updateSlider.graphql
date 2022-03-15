@@ -1,0 +1,50 @@
+
+"Input for `updateSlider` mutation"
+input UpdateSliderInput {
+  "An optional string identifying the mutation call, which will be returned in the response payload"
+  clientMutationId: String
+
+  "Title to display to customers"
+  displayTitle: String
+
+  "A list of the IDs of top products in this slider"
+  featuredProductIds: [ID]
+
+  "Hero media URL"
+  heroMediaUrl: String
+
+  "ID of rule to modify"
+  id: ID!
+
+  "Whether the slider is visible"
+  isVisible: Boolean!
+
+  "Slider metafields"
+  metafields: [MetafieldInput]
+
+  "Unique name of the slider"
+  name: String!
+
+  "The shop that owns the slider"
+  shopId: ID!
+
+  "The slider slug. If left blank, the name will be slugified and saved as the slug"
+  slug: String
+}
+
+"Response payload for `updateSlider` mutation"
+type UpdateSliderPayload {
+  "The same string you sent with the mutation params, for matching mutation calls with their responses"
+  clientMutationId: String
+
+  "The updated slider"
+  slider: Slider!
+}
+
+extend type Mutation {
+  "Updates an existing slider"
+  updateSlider(
+    "Mutation input"
+    input: UpdateSliderInput!
+  ): UpdateSliderPayload!
+}

@@ -1,11 +1,11 @@
-import addTag from "./addTag.js";
-import setTagHeroMedia from "./setTagHeroMedia.js";
-import removeTag from "./removeTag.js";
-import updateTag from "./updateTag.js";
+import addSlider from "./addSlider.js";
+import setSliderHeroMedia from "./setSliderHeroMedia.js";
+import removeSlider from "./removeSlider.js";
+import updateSlider from "./updateSlider.js";
 
 export default {
-  addTag,
-  setTagHeroMedia,
-  removeTag,
-  updateTag
+  addSlider,
+  setSliderHeroMedia,
+  removeSlider,
+  updateSlider
 };

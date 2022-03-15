@@ -1,12 +1,12 @@
-# api-plugin-tags
+# api-plugin-sliders
 
-[![npm (scoped)](https://img.shields.io/npm/v/@reactioncommerce/api-plugin-tags.svg)](https://www.npmjs.com/package/@reactioncommerce/api-plugin-tags)
-[![CircleCI](https://circleci.com/gh/reactioncommerce/api-plugin-tags.svg?style=svg)](https://circleci.com/gh/reactioncommerce/api-plugin-tags)
+[![npm (scoped)](https://img.shields.io/npm/v/@reactioncommerce/api-plugin-sliders.svg)](https://www.npmjs.com/package/@reactioncommerce/api-plugin-sliders)
+[![CircleCI](https://circleci.com/gh/reactioncommerce/api-plugin-sliders.svg?style=svg)](https://circleci.com/gh/reactioncommerce/api-plugin-sliders)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ## Summary
 
-Tags plugin for the [Reaction API](https://github.com/reactioncommerce/reaction)
+Sliders plugin for the [Reaction API](https://github.com/reactioncommerce/reaction)
 
 ## Developer Certificate of Origin
 

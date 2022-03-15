@@ -1,5 +1,5 @@
-import tags from "./tags.js";
+import sliders from "./sliders.js";
 
 export default {
-  tags
+  sliders
 };

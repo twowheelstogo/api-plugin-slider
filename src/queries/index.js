@@ -1,11 +1,11 @@
-import productsByTagId from "./productsByTagId.js";
-import tag from "./tag.js";
-import tags from "./tags.js";
-import tagsByIds from "./tagsByIds.js";
+import productsBySliderId from "./productsBySliderId.js";
+import slider from "./slider.js";
+import sliders from "./sliders.js";
+import slidersByIds from "./slidersByIds.js";
 
 export default {
-  productsByTagId,
-  tag,
-  tags,
-  tagsByIds
+  productsBySliderId,
+  slider,
+  sliders,
+  slidersByIds
 };

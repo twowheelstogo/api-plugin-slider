@@ -41,7 +41,7 @@ const Metafield = new SimpleSchema({
 });
 
 /**
- * @name Tag
+ * @name Slider
  * @memberof Schemas
  * @type {SimpleSchema}
  * @property {String} _id optional
@@ -50,16 +50,16 @@ const Metafield = new SimpleSchema({
  * @property {String} type optional
  * @property {Metafield[]} metafields optional
  * @property {Number} position optional
- * @property {String[]} relatedTagIds optional
+ * @property {String[]} relatedSliderIds optional
  * @property {Boolean} isDeleted default value: `false`
  * @property {Boolean} isTopLevel required
  * @property {Boolean} isVisible default value: `true`
- * @property {String[]} groups optional, default value: `[],` groupIds that this tag belongs to
- * @property {String} shopId Tag shopId
+ * @property {String[]} groups optional, default value: `[],` groupIds that this slider belongs to
+ * @property {String} shopId Slider shopId
  * @property {Date} createdAt required
  * @property {Date} updatedAt required
  */
-export const Tag = new SimpleSchema({
+export const Slider = new SimpleSchema({
   "_id": {
     type: String,
     optional: true
@@ -79,11 +79,11 @@ export const Tag = new SimpleSchema({
     type: SimpleSchema.Integer,
     optional: true
   },
-  "relatedTagIds": {
+  "relatedSliderIds": {
     type: Array,
     optional: true
   },
-  "relatedTagIds.$": String,
+  "relatedSliderIds.$": String,
   "isDeleted": {
     type: Boolean,
     defaultValue: false
@@ -94,14 +94,14 @@ export const Tag = new SimpleSchema({
     defaultValue: true
   },
   "groups": {
-    type: Array, // groupIds that this tag belongs to
+    type: Array, // groupIds that this slider belongs to
     optional: true,
     defaultValue: []
   },
   "groups.$": String,
   "shopId": {
     type: String,
-    label: "Tag shopId"
+    label: "Slider shopId"
   },
   "createdAt": {
     type: Date

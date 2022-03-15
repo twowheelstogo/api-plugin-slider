@@ -5,7 +5,7 @@ import policies from "./policies.json";
 import queries from "./queries/index.js";
 import resolvers from "./resolvers/index.js";
 import schemas from "./schemas/index.js";
-import { Tag } from "./simpleSchemas.js";
+import { Slider } from "./simpleSchemas.js";
 import preStartup from "./preStartup.js";
 
 /**
@@ -15,21 +15,21 @@ import preStartup from "./preStartup.js";
  */
 export default async function register(app) {
   await app.registerPlugin({
-    label: "Tags",
-    name: "tags",
+    label: "Sliders",
+    name: "sliders",
     version: pkg.version,
     i18n,
     functionsByType: {
       preStartup: [preStartup]
     },
     collections: {
-      Tags: {
-        name: "Tags",
+      Sliders: {
+        name: "Sliders",
         indexes: [
           // Create indexes. We set specific names for backwards compatibility
           // with indexes created by the aldeed:schema-index Meteor package.
           [{ name: 1 }, { name: "c2_name" }],
-          [{ relatedTagIds: 1 }, { name: "c2_relatedTagIds" }],
+          [{ relatedSliderIds: 1 }, { name: "c2_relatedSliderIds" }],
           [{ shopId: 1 }, { name: "c2_shopId" }],
           [{ slug: 1, shopId: 1 }, { unique: true }]
         ]
@@ -43,7 +43,7 @@ export default async function register(app) {
     queries,
     policies,
     simpleSchemas: {
-      Tag
+      Slider
     }
   });
 }

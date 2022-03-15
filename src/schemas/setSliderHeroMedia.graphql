@@ -1,0 +1,31 @@
+"Input for `setSliderHeroMedia` mutation"
+input SetSliderHeroMediaInput {
+  "An optional string identifying the mutation call, which will be returned in the response payload"
+  clientMutationId: String
+
+  "File record document"
+  fileRecord: JSONObject
+
+  "ID of slider to add the hero image record to"
+  id: ID!
+
+  "The shop that owns the slider"
+  shopId: ID!
+}
+
+"Response payload for `setSliderHeroMedia` mutation"
+type SetSliderHeroMediaPayload {
+  "The same string you sent with the mutation params, for matching mutation calls with their responses"
+  clientMutationId: String
+
+  "Slider the hero image was added to"
+  slider: Slider!
+}
+
+extend type Mutation {
+  "Add an image to the slider"
+  setSliderHeroMedia(
+    "Mutation input"
+    input: SetSliderHeroMediaInput!
+  ): SetSliderHeroMediaPayload!
+}

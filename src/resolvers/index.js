@@ -3,14 +3,14 @@ import CatalogProduct from "./CatalogProduct/index.js";
 import Mutation from "./Mutation/index.js";
 import Query from "./Query/index.js";
 import Shop from "./Shop/index.js";
-import Tag from "./Tag/index.js";
+import Slider from "./Slider/index.js";
 
 export default {
   CatalogProduct,
   Mutation,
   Query,
   Shop,
-  Tag,
-  ...getConnectionTypeResolvers("Tag"),
-  ...getConnectionTypeResolvers("TagProduct")
+  Slider,
+  ...getConnectionTypeResolvers("Slider"),
+  ...getConnectionTypeResolvers("SliderProduct")
 };

@@ -1,5 +1,5 @@
 /**
- * @summary remove index slug_1 from tags
+ * @summary remove index slug_1 from sliders
  * @param {Object} args - the arguments
  * @param {Object} args.db - the DB client
  * @param {Function} args.progress - a function to set the progress of the operation
@@ -9,7 +9,7 @@ async function up({ db, progress }) {
   progress(0);
 
   const index = "slug_1";
-  await db.collection("Tags").dropIndex(index);
+  await db.collection("Sliders").dropIndex(index);
 
   progress(100);
 }

@@ -1,15 +1,15 @@
 [
   {
-    "description": "Tag managers acting on all entities.",
-    "subjects": [ "reaction:groups:tag-managers" ],
-    "resources": [ "reaction:legacy:tags" ],
+    "description": "Slider managers acting on all entities.",
+    "subjects": [ "reaction:groups:slider-managers" ],
+    "resources": [ "reaction:legacy:sliders" ],
     "actions": [ "create" ],
     "effect": "allow"
   },
   {
-    "description": "Tag managers acting on specific entities.",
-    "subjects": [ "reaction:groups:tag-managers" ],
-    "resources": ["reaction:legacy:tags:*"],
+    "description": "Slider managers acting on specific entities.",
+    "subjects": [ "reaction:groups:slider-managers" ],
+    "resources": ["reaction:legacy:sliders:*"],
     "actions": [
       "delete",
       "read",
@@ -19,10 +19,10 @@
     "effect": "allow"
   },
   {
-    "description": "Anyone can read public tags.",
+    "description": "Anyone can read public sliders.",
     "subjects": [ "reaction:**" ],
     "resources": [
-      "reaction:legacy:tags:*"
+      "reaction:legacy:sliders:*"
     ],
     "actions": [ "read" ],
     "effect": "allow",

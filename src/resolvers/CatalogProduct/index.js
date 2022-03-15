@@ -1,7 +1,7 @@
-import tagIds from "./tagIds.js";
-import tags from "./tags.js";
+import sliderIds from "./sliderIds.js";
+import sliders from "./sliders.js";
 
 export default {
-  tagIds,
-  tags
+  sliderIds,
+  sliders
 };

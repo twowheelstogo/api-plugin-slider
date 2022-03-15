@@ -1,1 +1,1 @@
-export const migrationsNamespace = "tags";
+export const migrationsNamespace = "sliders";

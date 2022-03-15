@@ -1,15 +1,15 @@
 [
   {
     "i18n": "pt",
-    "ns": "reaction-tags",
+    "ns": "reaction-sliders",
     "translation": {
-      "reaction-tags": {
-        "tagAddedToProduct": "Etiqueta \"{{tagName}}\" adicionada ao produto",
-        "tagRemovedFromProduct": "Etiqueta \"{{tagName}}\" removida do produto",
+      "reaction-sliders": {
+        "sliderAddedToProduct": "Etiqueta \"{{sliderName}}\" adicionada ao produto",
+        "sliderRemovedFromProduct": "Etiqueta \"{{sliderName}}\" removida do produto",
         "admin": {
-          "tags": {
-            "tags": "Etiquetas",
-            "tagManagement": "Gerenciamento de Etiqueta",
+          "sliders": {
+            "sliders": "Etiquetas",
+            "sliderManagement": "Gerenciamento de Etiqueta",
             "enabled": "Ativado",
             "disabled": "Desativado",
             "enable": "Ativar",
@@ -30,7 +30,7 @@
               "nameHelpText": "O nome único para a etiqueta",
               "displayTitle": "Título",
               "displayTitleAndSlug": "Título e slug",
-              "displayTitleHelpText": "O título da etiqueta para as páginas de listagem de produtos.",
+              "displayTitleHelpText": "O título da etiqueta para as páginas de lissliderem de produtos.",
               "displayTitlePlaceholder": "ex. Sapatos Femininos",
               "slug": "Slug",
               "slugHelpText": "Etiqueta slug é automaticamente convertida em texto compatível com URL ao salvar. Se ficar em branco será utilizado o nome da etiqueta.",
@@ -49,13 +49,13 @@
               "submitUpdate": "Atualizar Etiqueta",
               "saveChanges": "Salvar alterações",
               "isVisible": "Etiqueta ativa na loja",
-              "tagDetails": "Detalhes da etiqueta",
+              "sliderDetails": "Detalhes da etiqueta",
               "metadata": "Metadado",
               "products": "Produtos",
               "save": "Salvar",
-              "tagListingHero": "Hero image da página de listagem de etiqueta",
-              "tagListingHeroHelpText": "Imagens com proporção de 16:9 ou maior funcionam melhor.",
-              "tagMetadata": "Metadado da etiqueta",
+              "sliderListingHero": "Hero image da página de lissliderem de etiqueta",
+              "sliderListingHeroHelpText": "Imagens com proporção de 16:9 ou maior funcionam melhor.",
+              "sliderMetadata": "Metadado da etiqueta",
               "openGraph": "OpenGraph",
               "keywords": "Palavras-chave",
               "keywordsPlaceholder": "Palavras-chave",

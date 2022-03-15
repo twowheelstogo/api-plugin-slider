@@ -1,0 +1,28 @@
+"Input for `removeSlider` mutation"
+input RemoveSliderInput {
+  "An optional string identifying the mutation call, which will be returned in the response payload"
+  clientMutationId: String
+
+  "ID of slider to delete"
+  id: ID!
+
+  "The shop that owns the slider"
+  shopId: ID!
+}
+
+"Response payload for `removeSlider` mutation"
+type RemoveSliderPayload {
+  "The same string you sent with the mutation params, for matching mutation calls with their responses"
+  clientMutationId: String
+
+  "The deleted slider"
+  slider: Slider!
+}
+
+extend type Mutation {
+  "Removes an existing slider"
+  removeSlider(
+    "Mutation input"
+    input: RemoveSliderInput!
+  ): RemoveSliderPayload!
+}

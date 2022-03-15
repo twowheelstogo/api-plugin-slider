@@ -1,9 +1,9 @@
-import productsByTagId from "./productsByTagId.js";
-import tag from "./tag.js";
-import tags from "./tags.js";
+import productsBySliderId from "./productsBySliderId.js";
+import slider from "./slider.js";
+import sliders from "./sliders.js";
 
 export default {
-  productsByTagId,
-  tag,
-  tags
+  productsBySliderId,
+  slider,
+  sliders
 };

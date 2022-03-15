@@ -1,0 +1,182 @@
+extend type CatalogProduct {
+  "The list of slider IDs that have been applied to this product"
+  sliderIds: [ID]
+
+  "The list of sliders that have been applied to this product"
+  sliders(
+    "Return only results that come after this cursor. Use this with `first` to specify the number of results to return."
+    after: ConnectionCursor,
+
+    "Return only results that come before this cursor. Use this with `last` to specify the number of results to return."
+    before: ConnectionCursor,
+
+    "Return at most this many results. This parameter may be used with either `after` or `offset` parameters."
+    first: ConnectionLimitInt,
+
+    "Return at most this many results. This parameter may be used with the `before` parameter."
+    last: ConnectionLimitInt,
+
+    "Return only results that come after the Nth result. This parameter may be used with the `first` parameter."
+    offset: Int,
+
+    "Return results sorted in this order"
+    sortOrder: SortOrder = asc,
+
+    "By default, sliders are sorted by ID. Set this to sort by one of the other allowed fields"
+    sortBy: SliderSortByField = _id
+  ): SliderConnection
+}
+
+extend type Shop {
+  "Returns a paged list of sliders for this shop"
+  sliders(
+    "If set, the query will return only top-level sliders or only non-top-level sliders. By default, both types of sliders are returned."
+    isTopLevel: Boolean,
+
+    "Set to true if you want soft deleted sliders to be included in the response"
+    shouldIncludeDeleted: Boolean = false,
+
+    "Return only results that come after this cursor. Use this with `first` to specify the number of results to return."
+    after: ConnectionCursor,
+
+    "Return only results that come before this cursor. Use this with `last` to specify the number of results to return."
+    before: ConnectionCursor,
+
+    "Return at most this many results. This parameter may be used with either `after` or `offset` parameters."
+    first: ConnectionLimitInt,
+
+    "Return at most this many results. This parameter may be used with the `before` parameter."
+    last: ConnectionLimitInt,
+
+    "Return only results that come after the Nth result. This parameter may be used with the `first` parameter."
+    offset: Int,
+
+    "Return results sorted in this order"
+    sortOrder: SortOrder = asc,
+
+    "By default, sliders are sorted by position. Set this to sort by one of the other allowed fields"
+    sortBy: SliderSortByField = position
+  ): SliderConnection
+}
+
+extend type Slider {
+  "A paged list of sliders that have this slider as their parent in the slider hierarchy. Currently only three levels are supported."
+  subSliders(
+    "Return only results that come after this cursor. Use this with `first` to specify the number of results to return."
+    after: ConnectionCursor,
+
+    "Return only results that come before this cursor. Use this with `last` to specify the number of results to return."
+    before: ConnectionCursor,
+
+    "Return at most this many results. This parameter may be used with either `after` or `offset` parameters."
+    first: ConnectionLimitInt,
+
+    "Return at most this many results. This parameter may be used with the `before` parameter."
+    last: ConnectionLimitInt,
+
+    "Return only results that come after the Nth result. This parameter may be used with the `first` parameter."
+    offset: Int,
+
+    "Return results sorted in this order"
+    sortOrder: SortOrder = asc,
+
+    "By default, sliders are sorted by position. Set this to sort by one of the other allowed fields"
+    sortBy: SliderSortByField = position
+  ): SliderConnection
+}
+
+"The fields by which you are allowed to sort any query that returns a `SliderConnection`"
+enum SliderSortByField {
+  "Slider ID"
+  _id
+
+  "Date and time the slider was created"
+  createdAt
+
+  "Slider name"
+  name
+
+  "Slider position"
+  position
+
+  "Date and time the slider was last updated"
+  updatedAt
+}
+
+"A connection edge in which each node is a `Slider` object"
+type SliderEdge implements NodeEdge {
+  "The cursor that represents this node in the paginated results"
+  cursor: ConnectionCursor!
+
+  "The slider"
+  node: Slider
+}
+
+"""
+Wraps a list of `Sliders`, providing pagination cursors and information.
+
+For information about what Relay-compatible connections are and how to use them, see the following articles:
+- [Relay Connection Documentation](https://facebook.github.io/relay/docs/en/graphql-server-specification.html#connections)
+- [Relay Connection Specification](https://facebook.github.io/relay/graphql/connections.htm)
+- [Using Relay-style Connections With Apollo Client](https://www.apollographql.com/docs/react/recipes/pagination.html)
+"""
+type SliderConnection {
+  "The list of nodes that match the query, wrapped in an edge to provide a cursor string for each"
+  edges: [SliderEdge]
+
+  """
+  You can request the `nodes` directly to avoid the extra wrapping that `NodeEdge` has,
+  if you know you will not need to paginate the results.
+  """
+  nodes: [Slider]
+
+  "Information to help a client request the next or previous page"
+  pageInfo: PageInfo!
+
+  "The total number of nodes that match your query"
+  totalCount: Int!
+}
+
+extend type Query {
+  "Returns a paged list of sliders for a shop. You must include a shopId when querying."
+  sliders(
+    "Only sliders associated with this shop will be returned"
+    shopId: ID!,
+
+    "If provided, this query will do a regex search using the provided filter data, and return only sliders that match"
+    filter: String
+
+    "Sliders to exclude from results"
+    excludedSliderIds: [ID]
+
+    "If set, the query will return only top-level sliders or only non-top-level sliders. By default, both types of sliders are returned."
+    isTopLevel: Boolean,
+
+    "Set to true if you want soft deleted sliders to be included in the response"
+    shouldIncludeDeleted: Boolean = false,
+
+    "Set to true if you want to include sliders that have isVisible set to false"
+    shouldIncludeInvisible: Boolean = false,
+
+    "Return only results that come after this cursor. Use this with `first` to specify the number of results to return."
+    after: ConnectionCursor,
+
+    "Return only results that come before this cursor. Use this with `last` to specify the number of results to return."
+    before: ConnectionCursor,
+
+    "Return at most this many results. This parameter may be used with either `after` or `offset` parameters."
+    first: ConnectionLimitInt,
+
+    "Return at most this many results. This parameter may be used with the `before` parameter."
+    last: ConnectionLimitInt,
+
+    "Return only results that come after the Nth result. This parameter may be used with the `first` parameter."
+    offset: Int,
+
+    "Return results sorted in this order"
+    sortOrder: SortOrder = asc,
+
+    "By default, sliders are sorted by position. Set this to sort by one of the other allowed fields"
+    sortBy: SliderSortByField = position
+  ): SliderConnection
+}
